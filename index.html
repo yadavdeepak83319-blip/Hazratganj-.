@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Discover Hazratgunj Restaurant and Banquet Hall in Gorakhpur. Explore North Indian and Chinese dining, private dining and banquet enquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hazratgunj — Great Food. Grand Occasions.">
+  <meta property="og:description" content="North Indian and Chinese dining, private dining and celebrations in Gorakhpur.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85">
+  <title>Hazratgunj Restaurant & Banquet Hall | Gorakhpur</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23191916'/%3E%3Ctext x='50' y='73' text-anchor='middle' font-family='Georgia' font-size='68' fill='%23dfc69c'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #191916;
+      --ink-soft: #262621;
+      --cream: #f4f0e8;
+      --paper: #fbf9f4;
+      --gold: #c5a878;
+      --gold-bright: #dfc69c;
+      --muted: #77766f;
+      --line: rgba(25, 25, 22, .14);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --ease: cubic-bezier(.22, .7, .2, 1);
+      --header-h: 82px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 18px); }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    body.locked { overflow: hidden; }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    ::selection { color: var(--ink); background: var(--gold-bright); }
+    .serif { font-family: var(--serif); font-weight: 400; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 11px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .eyebrow::before { width: 25px; height: 1px; content: ""; background: currentColor; }
+    .section { padding: clamp(76px, 10vw, 142px) max(6vw, calc((100vw - 1320px)/2)); }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 42px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 { margin-bottom: 0; font: 400 clamp(38px, 5vw, 68px)/1.08 var(--serif); letter-spacing: -.035em; }
+    .section-note { max-width: 390px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .btn { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; gap: 12px; padding: 0 23px; border: 1px solid transparent; border-radius: 2px; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; transition: transform .3s var(--ease), background .3s, color .3s, border-color .3s; }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-gold { color: var(--ink); background: var(--gold-bright); }
+    .btn-gold:hover { background: #ead8b8; }
+    .btn-outline { color: white; border-color: rgba(255,255,255,.55); background: transparent; }
+    .btn-outline:hover { color: var(--ink); border-color: white; background: white; }
+    .btn-dark { color: white; background: var(--ink); }
+    .btn-dark:hover { background: #393831; }
+    .arrow { font-size: 17px; transition: transform .25s var(--ease); }
+    a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
+    .muted { color: var(--muted); }
+
+    /* Navigation and first impression */
+    .site-header { position: fixed; z-index: 30; inset: 0 0 auto; height: var(--header-h); display: flex; align-items: center; padding: 0 max(5vw, calc((100vw - 1440px)/2)); color: white; transition: background .35s, box-shadow .35s, height .35s; }
+    .site-header.scrolled { height: 70px; background: rgba(23,23,20,.94); box-shadow: 0 8px 30px rgba(0,0,0,.13); backdrop-filter: blur(16px); }
+    .brand { flex: 0 0 auto; font-size: 16px; font-weight: 700; letter-spacing: .19em; }
+    .brand small { display: block; margin-top: 5px; color: var(--gold-bright); font-size: 8px; font-weight: 500; letter-spacing: .29em; }
+    .main-nav { display: flex; align-items: center; gap: clamp(16px, 2vw, 30px); margin: 0 auto; padding: 0 24px; }
+    .main-nav a { position: relative; color: rgba(255,255,255,.79); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .main-nav a::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 1px; background: var(--gold-bright); content: ""; transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+    .main-nav a:hover::after { transform: scaleX(1); }
+    .nav-reserve { min-height: 43px; padding: 0 17px; font-size: 9px; }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.3); background: transparent; }
+    .menu-toggle span { display: block; width: 17px; height: 1px; margin: 5px auto; background: white; transition: transform .3s; }
+    .mobile-nav { position: fixed; z-index: 29; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 21px; padding: 100px 10vw 90px; color: white; background: var(--ink); opacity: 0; visibility: hidden; transform: translateY(-12px); transition: opacity .35s, transform .35s, visibility .35s; }
+    .mobile-nav.open { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mobile-nav a { font: 400 clamp(28px, 7vw, 43px) var(--serif); }
+    .hero { position: relative; min-height: min(850px, 100svh); min-height: max(690px, 100svh); display: grid; align-items: center; overflow: hidden; color: white; background: #27251f; }
+    .hero-bg { position: absolute; inset: -4%; width: 108%; height: 108%; object-fit: cover; object-position: center 53%; animation: heroReveal 1.6s var(--ease) both; }
+    .hero::before { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(12,12,10,.77) 0%, rgba(12,12,10,.53) 44%, rgba(12,12,10,.16) 100%), linear-gradient(0deg, rgba(12,12,10,.55), transparent 35%); }
+    .hero-copy { position: relative; z-index: 2; width: min(780px, 90vw); margin: 88px 0 0 max(11vw, calc((100vw - 1240px)/2)); }
+    .hero-kicker { display: block; margin: 0 0 25px; color: var(--gold-bright); font-size: 10px; font-weight: 700; letter-spacing: .25em; animation: riseIn .75s .12s both; }
+    .hero h1 { max-width: 790px; margin: 0 0 25px; font: 400 clamp(54px, 8vw, 104px)/.99 var(--serif); letter-spacing: -.046em; }
+    .hero h1 span { display: inline-block; margin-right: .18em; animation: riseIn .85s var(--ease) both; }
+    .hero h1 span:nth-child(2) { animation-delay: .16s; }
+    .hero h1 span:nth-child(3) { animation-delay: .24s; }
+    .hero h1 span:nth-child(4) { animation-delay: .32s; }
+    .hero h1 span:nth-child(5) { animation-delay: .4s; }
+    .hero-copy > p:not(.hero-kicker) { max-width: 550px; margin-bottom: 32px; color: rgba(255,255,255,.83); font-size: clamp(14px, 1.35vw, 17px); line-height: 1.8; animation: riseIn .8s .45s both; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; animation: riseIn .8s .56s both; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 44px; color: rgba(255,255,255,.81); animation: riseIn .8s .66s both; }
+    .hero-meta span { font-size: 11px; letter-spacing: .04em; }
+    .hero-meta strong { color: white; font-size: 16px; font-weight: 600; }
+    .scroll-cue { position: absolute; z-index: 2; right: 6vw; bottom: 31px; display: flex; align-items: center; gap: 11px; color: rgba(255,255,255,.78); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+    .scroll-cue i { width: 36px; height: 1px; background: var(--gold-bright); animation: pulseLine 1.8s ease-in-out infinite; }
+    .hero-vertical { position: absolute; z-index: 2; right: 4vw; top: 46%; color: rgba(255,255,255,.72); font-size: 9px; letter-spacing: .22em; writing-mode: vertical-rl; }
+    .quickbar { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(5, 1fr); padding: 0 max(7vw, calc((100vw - 1250px)/2)); color: white; background: var(--ink); }
+    .quickbar a { display: flex; min-height: 82px; align-items: center; justify-content: center; gap: 11px; border-right: 1px solid rgba(255,255,255,.1); font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; transition: color .2s, background .2s; }
+    .quickbar a:first-child { border-left: 1px solid rgba(255,255,255,.1); }
+    .quickbar a:hover { color: var(--gold-bright); background: rgba(255,255,255,.035); }
+    .quick-ico { color: var(--gold); font-size: 17px; }
+
+    /* Story */
+    .story { display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(48px, 9vw, 132px); align-items: center; }
+    .story-visual { position: relative; min-height: 560px; }
+    .story-visual img { width: 84%; height: 540px; object-fit: cover; }
+    .story-visual::after { position: absolute; right: 0; bottom: -20px; width: 57%; height: 67%; border: 1px solid var(--gold); content: ""; }
+    .story-stamp { position: absolute; z-index: 2; right: 4%; bottom: 4%; width: 146px; height: 146px; display: grid; place-content: center; border-radius: 50%; color: white; background: var(--ink); text-align: center; }
+    .story-stamp strong { color: var(--gold-bright); font: 400 34px var(--serif); }
+    .story-stamp span { margin-top: 5px; font-size: 8px; letter-spacing: .15em; text-transform: uppercase; }
+    .story-copy h2 { margin: 19px 0 22px; }
+    .story-copy > p { color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .story-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 19px; margin: 28px 0 33px; padding: 0; list-style: none; }
+    .story-list li { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+    .story-list li::before { color: #9c8054; content: "✦"; font-size: 12px; }
+    .text-link { display: inline-flex; align-items: center; gap: 9px; padding-bottom: 7px; border-bottom: 1px solid var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+
+    /* Menu and food */
+    .menu-section { color: white; background: var(--ink); }
+    .menu-section .section-note { color: rgba(255,255,255,.58); }
+    .menu-disclaimer { margin: -19px 0 28px; padding: 11px 15px; border-left: 2px solid var(--gold); color: rgba(255,255,255,.64); background: rgba(255,255,255,.045); font-size: 11px; line-height: 1.6; }
+    .menu-tools { display: grid; grid-template-columns: 1fr auto; gap: 17px; align-items: center; margin-bottom: 25px; }
+    .search-wrap { position: relative; max-width: 410px; }
+    .search-wrap input { width: 100%; height: 48px; padding: 0 15px 0 42px; border: 1px solid rgba(255,255,255,.2); border-radius: 0; outline: 0; color: white; background: rgba(255,255,255,.04); }
+    .search-wrap input:focus { border-color: var(--gold); }
+    .search-wrap::before { position: absolute; top: 14px; left: 15px; color: var(--gold); content: "⌕"; font-size: 19px; }
+    .filters { display: flex; flex-wrap: wrap; justify-content: end; gap: 7px; }
+    .filter-btn, .category-btn { min-height: 40px; padding: 0 14px; border: 1px solid rgba(255,255,255,.19); color: rgba(255,255,255,.73); background: transparent; cursor: pointer; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; transition: .22s; }
+    .filter-btn.active, .category-btn.active, .filter-btn:hover, .category-btn:hover { color: var(--ink); border-color: var(--gold-bright); background: var(--gold-bright); }
+    .category-row { display: flex; gap: 8px; overflow-x: auto; padding: 0 0 17px; scrollbar-width: thin; scrollbar-color: #685b43 transparent; }
+    .category-btn { flex: 0 0 auto; min-height: 39px; }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .dish-card { display: grid; grid-template-columns: 113px 1fr; min-height: 145px; border: 1px solid rgba(255,255,255,.13); background: rgba(255,255,255,.035); transition: transform .35s var(--ease), border-color .3s, background .3s; }
+    .dish-card:hover { transform: translateY(-4px); border-color: rgba(197,168,120,.58); background: rgba(255,255,255,.065); }
+    .dish-card img { height: 100%; min-height: 145px; object-fit: cover; }
+    .dish-body { display: flex; flex-direction: column; align-items: flex-start; padding: 15px 14px; }
+    .dish-kind { color: var(--gold-bright); font-size: 8px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .dish-title { margin: 7px 0 5px; font: 400 18px/1.18 var(--serif); }
+    .dish-desc { margin: 0 0 9px; color: rgba(255,255,255,.55); font-size: 10px; line-height: 1.55; }
+    .dish-bottom { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
+    .dish-price { color: var(--gold-bright); font-size: 10px; }
+    .add-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid rgba(255,255,255,.25); color: white; background: transparent; cursor: pointer; font-size: 9px; letter-spacing: .07em; text-transform: uppercase; transition: .2s; }
+    .add-btn:hover { color: var(--ink); border-color: var(--gold-bright); background: var(--gold-bright); }
+    .menu-empty { grid-column: 1/-1; padding: 42px 20px; border: 1px dashed rgba(255,255,255,.24); color: rgba(255,255,255,.7); text-align: center; font-size: 13px; line-height: 1.7; }
+    .catalogue-cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 33px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.13); }
+    .catalogue-cta p { max-width: 470px; margin: 0; color: rgba(255,255,255,.6); font-size: 12px; line-height: 1.7; }
+    .cart-pill { position: fixed; z-index: 25; right: 28px; bottom: 28px; display: flex; min-height: 50px; align-items: center; gap: 13px; padding: 0 19px; border: 1px solid rgba(255,255,255,.2); border-radius: 99px; color: white; background: var(--ink); box-shadow: 0 10px 40px rgba(0,0,0,.2); cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: 0; visibility: hidden; transform: translateY(10px); transition: .25s; }
+    .cart-pill.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .cart-count { display: grid; width: 23px; height: 23px; place-items: center; border-radius: 50%; color: var(--ink); background: var(--gold-bright); font-size: 10px; }
+    .signature { position: relative; overflow: clip; padding: 0 max(6vw, calc((100vw - 1320px)/2)); background: var(--cream); }
+    .signature-stage { position: sticky; top: var(--header-h); height: calc(100svh - var(--header-h)); display: flex; flex-direction: column; justify-content: center; }
+    .signature-stage .section-head { flex: 0 0 auto; }
+    .signature-track { display: grid; width: 100%; grid-auto-columns: minmax(270px, 28vw); grid-auto-flow: column; gap: 20px; overflow: visible; padding: 5px 2px 21px; will-change: transform; }
+    .signature-card { position: relative; height: 390px; overflow: hidden; scroll-snap-align: start; color: white; background: #39372f; }
+    .signature-card img { height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+    .signature-card:hover img { transform: scale(1.06); }
+    .signature-card::after { position: absolute; inset: 35% 0 0; content: ""; background: linear-gradient(0deg, rgba(14,14,12,.83), transparent); }
+    .signature-card div { position: absolute; z-index: 1; right: 22px; bottom: 23px; left: 22px; }
+    .signature-card span { color: var(--gold-bright); font-size: 8px; letter-spacing: .15em; text-transform: uppercase; }
+    .signature-card h3 { margin: 8px 0 0; font: 400 27px var(--serif); }
+    .visual-caption { margin: 13px 0 0; color: var(--muted); font-size: 10px; }
+
+    /* Celebrations */
+    .banquet { position: relative; overflow: hidden; color: white; background: #282721; }
+    .banquet::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(22,21,18,.93), rgba(22,21,18,.7) 48%, rgba(22,21,18,.3)), url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1900&q=85") center/cover; }
+    .banquet-inner { position: relative; z-index: 1; max-width: 1200px; margin: auto; }
+    .banquet h2 { max-width: 690px; margin: 19px 0 20px; }
+    .banquet-lead { max-width: 650px; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.85; }
+    .event-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 43px 0 35px; }
+    .event-card { min-height: 113px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; border: 1px solid rgba(255,255,255,.2); background: rgba(20,20,17,.32); backdrop-filter: blur(6px); }
+    .event-card span { color: var(--gold-bright); font-size: 20px; }
+    .event-card strong { font-size: 10px; font-weight: 500; letter-spacing: .05em; }
+    .banquet-foot { display: flex; justify-content: space-between; align-items: center; gap: 22px; }
+    .banquet-foot small { max-width: 435px; color: rgba(255,255,255,.55); font-size: 10px; line-height: 1.65; }
+    .private { display: grid; grid-template-columns: 1.02fr .98fr; min-height: 650px; color: white; background: #211f1b; }
+    .private-visual { min-height: 620px; overflow: hidden; }
+    .private-visual img { height: 100%; object-fit: cover; }
+    .private-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: clamp(50px, 9vw, 126px); }
+    .private-copy h2 { margin: 20px 0; }
+    .private-copy > p { max-width: 430px; color: rgba(255,255,255,.65); font-size: 14px; line-height: 1.85; }
+    .private-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 19px 0 31px; }
+    .private-list span { padding: 9px 11px; border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.77); font-size: 9px; letter-spacing: .07em; }
+
+    /* Gallery, rating and contact */
+    .gallery-grid { display: grid; grid-template-columns: 1.15fr .85fr .85fr; grid-template-rows: 230px 220px; gap: 13px; }
+    .gallery-item { position: relative; overflow: hidden; background: #dad4c7; cursor: pointer; }
+    .gallery-item:first-child { grid-row: span 2; }
+    .gallery-item:nth-child(4) { grid-column: 2 / 4; }
+    .gallery-item img { height: 100%; object-fit: cover; transition: transform .7s var(--ease), filter .4s; }
+    .gallery-item:hover img { filter: brightness(.82); transform: scale(1.055); }
+    .gallery-item span { position: absolute; right: 15px; bottom: 13px; color: white; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; text-shadow: 0 2px 7px #000; }
+    .lightbox { position: fixed; z-index: 80; inset: 0; display: grid; grid-template-columns: 65px 1fr 65px; place-items: center; padding: 4vh 5vw; background: rgba(14,14,13,.96); opacity: 0; visibility: hidden; transition: .25s; }
+    .lightbox.open { opacity: 1; visibility: visible; }
+    .lightbox img { width: auto; max-width: min(82vw, 1250px); max-height: 85vh; object-fit: contain; }
+    .lightbox button { width: 45px; height: 45px; border: 1px solid rgba(255,255,255,.35); color: white; background: transparent; cursor: pointer; font-size: 23px; }
+    .lightbox-close { position: absolute; top: 24px; right: 28px; }
+    .reviews { color: white; background: var(--ink); }
+    .reviews .section-note { color: rgba(255,255,255,.55); }
+    .review-panel { display: grid; grid-template-columns: .7fr 1.3fr; gap: 55px; align-items: center; padding: 43px 0 0; border-top: 1px solid rgba(255,255,255,.17); }
+    .review-score { padding-right: 44px; border-right: 1px solid rgba(255,255,255,.16); }
+    .review-score strong { display: block; font: 400 86px/.95 var(--serif); }
+    .review-stars { margin: 15px 0; color: var(--gold-bright); letter-spacing: .16em; }
+    .review-score p, .review-empty { margin: 0; color: rgba(255,255,255,.57); font-size: 11px; line-height: 1.8; }
+    .review-empty { max-width: 570px; font-size: 14px; }
+    .contact-section { background: var(--cream); }
+    .contact-layout { display: grid; grid-template-columns: .92fr 1.08fr; gap: 55px; }
+    .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .info-block { padding-top: 15px; border-top: 1px solid var(--line); }
+    .info-block strong { display: block; margin-bottom: 9px; color: #9a7c4c; font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    .info-block p { margin: 0; font-size: 12px; line-height: 1.75; }
+    .info-block .subtle { color: var(--muted); font-size: 10px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 30px; }
+    .map-frame { min-height: 400px; border: 0; background: #ded9ce; filter: saturate(.68); }
+    .map-caption { margin: 9px 0 0; color: var(--muted); font-size: 10px; }
+    .booking { display: grid; grid-template-columns: .82fr 1.18fr; color: white; background: #27251f; }
+    .booking-copy { padding: clamp(62px, 8vw, 112px) max(6vw, calc((100vw - 1320px)/2)); }
+    .booking-copy h2 { margin: 20px 0; }
+    .booking-copy > p { max-width: 410px; color: rgba(255,255,255,.63); font-size: 13px; line-height: 1.85; }
+    .booking-form-wrap { display: flex; align-items: center; padding: 65px max(7vw, calc((100vw - 1320px)/2)) 65px 30px; background: #302e27; }
+    .form-grid { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field.full { grid-column: 1/-1; }
+    .field label { color: rgba(255,255,255,.72); font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 45px; padding: 11px 12px; border: 1px solid rgba(255,255,255,.19); border-radius: 0; outline: 0; color: white; background: rgba(255,255,255,.045); }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+    .field select option { color: var(--ink); }
+    .field textarea { min-height: 74px; resize: vertical; }
+    .field ::placeholder { color: rgba(255,255,255,.39); }
+    .form-foot { display: flex; flex-wrap: wrap; grid-column: 1/-1; align-items: center; gap: 13px; }
+    .form-foot small { color: rgba(255,255,255,.46); font-size: 9px; line-height: 1.6; }
+    .form-feedback { grid-column: 1/-1; min-height: 20px; margin: 0; color: var(--gold-bright); font-size: 11px; }
+    .offer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
+    .offer-card { min-height: 186px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border: 1px solid var(--line); background: rgba(255,255,255,.38); transition: transform .3s var(--ease), border-color .3s; }
+    .offer-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+    .offer-card span { color: #9a7c4c; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+    .offer-card h3 { margin: 17px 0 8px; font: 400 23px var(--serif); }
+    .offer-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.65; }
+    .offers-note { margin: 16px 0 0; color: var(--muted); font-size: 10px; }
+
+    /* Footer, drawers and studio */
+    .footer { padding: 69px max(6vw, calc((100vw - 1320px)/2)) 82px; color: white; background: #141411; }
+    .footer-top { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 45px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .footer .brand { display: inline-block; margin-bottom: 18px; }
+    .footer p { max-width: 310px; color: rgba(255,255,255,.56); font-size: 11px; line-height: 1.8; }
+    .footer h4 { margin: 4px 0 18px; color: var(--gold-bright); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 24px; }
+    .footer-links a, .footer-contact a, .footer-contact span { color: rgba(255,255,255,.72); font-size: 10px; }
+    .footer-links a:hover, .footer-contact a:hover { color: var(--gold-bright); }
+    .footer-contact { display: grid; gap: 13px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 19px; color: rgba(255,255,255,.42); font-size: 9px; }
+    .footer-bottom a { margin-left: 17px; }
+    .footer-bottom a:hover { color: white; }
+    .float-wa { position: fixed; z-index: 24; right: 26px; bottom: 91px; display: grid; width: 53px; height: 53px; place-items: center; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; color: white; background: #4c7657; box-shadow: 0 8px 25px rgba(0,0,0,.21); font-size: 23px; animation: softPulse 2.8s ease-out infinite; }
+    .float-wa:hover { background: #3f684b; }
+    .mobile-actions { display: none; }
+    .overlay { position: fixed; z-index: 70; inset: 0; display: flex; justify-content: flex-end; background: rgba(11,11,9,.62); opacity: 0; visibility: hidden; transition: .25s; }
+    .overlay.open { opacity: 1; visibility: visible; }
+    .drawer { width: min(470px, 100%); height: 100%; display: flex; flex-direction: column; padding: 27px; color: white; background: var(--ink); transform: translateX(25px); transition: transform .3s var(--ease); }
+    .overlay.open .drawer { transform: translateX(0); }
+    .drawer-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.18); }
+    .drawer-head h3 { margin: 0; font: 400 27px var(--serif); }
+    .icon-close { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,.3); color: white; background: transparent; cursor: pointer; font-size: 20px; }
+    .cart-items { flex: 1; overflow: auto; padding: 12px 0; }
+    .cart-line { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.13); }
+    .cart-line strong { display: block; margin-bottom: 5px; font: 400 18px var(--serif); }
+    .cart-line small { color: rgba(255,255,255,.53); font-size: 10px; }
+    .quantity { display: flex; align-items: center; gap: 8px; }
+    .quantity button { width: 26px; height: 26px; border: 1px solid rgba(255,255,255,.25); color: white; background: transparent; cursor: pointer; }
+    .quantity span { min-width: 14px; text-align: center; font-size: 11px; }
+    .cart-summary { padding-top: 18px; border-top: 1px solid rgba(255,255,255,.18); }
+    .cart-summary p { color: rgba(255,255,255,.62); font-size: 11px; line-height: 1.7; }
+    .cart-summary .field { margin: 14px 0; }
+    .cart-summary .btn { width: 100%; margin-top: 9px; }
+    .cart-empty { padding: 50px 12px; color: rgba(255,255,255,.56); text-align: center; font-size: 12px; line-height: 1.8; }
+    .admin-modal { position: fixed; z-index: 90; inset: 0; display: flex; align-items: center; justify-content: center; padding: 20px; background: rgba(10,10,8,.78); opacity: 0; visibility: hidden; transition: .25s; }
+    .admin-modal.open { opacity: 1; visibility: visible; }
+    .admin-panel { width: min(900px, 100%); max-height: min(88vh, 900px); display: flex; flex-direction: column; color: var(--ink); background: var(--paper); transform: translateY(12px); transition: .25s; }
+    .admin-modal.open .admin-panel { transform: translateY(0); }
+    .admin-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--line); }
+    .admin-head h2 { font-size: 29px; }
+    .admin-head .icon-close { color: var(--ink); border-color: var(--line); }
+    .admin-tabs { display: flex; gap: 5px; overflow: auto; padding: 12px 20px 0; border-bottom: 1px solid var(--line); }
+    .admin-tab { flex: 0 0 auto; padding: 11px 12px; border: 0; border-bottom: 2px solid transparent; color: var(--muted); background: transparent; cursor: pointer; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .admin-tab.active { color: var(--ink); border-color: var(--gold); }
+    .admin-content { overflow: auto; padding: 24px; }
+    .admin-warning { margin: 0 0 20px; padding: 12px 14px; border-left: 2px solid var(--gold); color: #615a4f; background: #f1eadf; font-size: 11px; line-height: 1.65; }
+    .admin-form { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .admin-field { display: flex; flex-direction: column; gap: 7px; }
+    .admin-field.full { grid-column: 1/-1; }
+    .admin-field label { color: #706c63; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .admin-field input, .admin-field select, .admin-field textarea { min-height: 41px; padding: 10px; border: 1px solid var(--line); outline: none; color: var(--ink); background: white; }
+    .admin-field textarea { min-height: 75px; resize: vertical; }
+    .admin-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+    .admin-actions .btn { min-height: 42px; padding: 0 14px; font-size: 9px; }
+    .admin-list { display: grid; gap: 8px; margin-top: 20px; }
+    .admin-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid var(--line); background: white; }
+    .admin-row strong { font-size: 11px; }
+    .admin-row small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; }
+    .admin-row button { border: 0; color: #8d4134; background: transparent; cursor: pointer; font-size: 10px; }
+    .admin-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 22px; border-top: 1px solid var(--line); }
+    .admin-foot small { color: var(--muted); font-size: 9px; line-height: 1.6; }
+    .admin-foot .btn { min-height: 40px; padding: 0 14px; font-size: 9px; }
+    .admin-status { min-height: 17px; margin: 12px 0 0; color: #7c6946; font-size: 10px; }
+    .toast { position: fixed; z-index: 100; left: 50%; bottom: 28px; padding: 13px 19px; color: white; background: var(--ink); box-shadow: 0 9px 30px rgba(0,0,0,.2); font-size: 11px; opacity: 0; pointer-events: none; transform: translate(-50%, 15px); transition: .25s; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .cursor-label { position: fixed; z-index: 100; top: 0; left: 0; display: grid; width: 63px; height: 63px; place-items: center; border: 1px solid var(--gold-bright); border-radius: 50%; color: white; background: rgba(25,25,22,.88); font-size: 8px; letter-spacing: .12em; pointer-events: none; opacity: 0; transform: translate(-50%,-50%) scale(.75); transition: opacity .2s, transform .2s; }
+    .cursor-label.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+    @keyframes heroReveal { from { transform: scale(1.05); } to { transform: scale(1); } }
+    @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulseLine { 0%,100% { transform: scaleX(.6); transform-origin: left; opacity: .55; } 50% { transform: scaleX(1); opacity: 1; } }
+    @keyframes softPulse { 0%,100% { box-shadow: 0 8px 25px rgba(0,0,0,.21), 0 0 0 0 rgba(76,118,87,.28); } 50% { box-shadow: 0 8px 25px rgba(0,0,0,.21), 0 0 0 8px rgba(76,118,87,0); } }
+    @media (max-width: 1100px) {
+      .main-nav { gap: 14px; }
+      .main-nav a { font-size: 9px; }
+      .nav-reserve { padding: 0 12px; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+      .event-grid { grid-template-columns: repeat(3,1fr); }
+      .private-copy { padding: 55px; }
+    }
+    @media (max-width: 780px) {
+      :root { --header-h: 70px; }
+      body { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
+      .section { padding: 77px 6vw; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 18px; margin-bottom: 30px; }
+      h2 { font-size: clamp(38px, 10vw, 55px); }
+      .site-header { padding: 0 6vw; }
+      .main-nav, .nav-reserve { display: none; }
+      .menu-toggle { display: block; margin-left: auto; }
+      .hero { min-height: 790px; min-height: 94svh; }
+      .hero-bg { object-position: 58% center; }
+      .hero::before { background: linear-gradient(90deg, rgba(12,12,10,.72), rgba(12,12,10,.35)), linear-gradient(0deg, rgba(12,12,10,.62), transparent 60%); }
+      .hero-copy { width: 88vw; margin: 83px 0 0 6vw; }
+      .hero h1 { font-size: clamp(55px, 13vw, 83px); }
+      .hero-meta { gap: 17px; margin-top: 31px; }
+      .hero-vertical { display: none; }
+      .scroll-cue { right: 6vw; bottom: 21px; }
+      .quickbar { display: none; }
+      .story { grid-template-columns: 1fr; gap: 46px; }
+      .story-visual { min-height: 440px; }
+      .story-visual img { height: 420px; }
+      .story-stamp { width: 120px; height: 120px; }
+      .menu-tools { grid-template-columns: 1fr; }
+      .search-wrap { max-width: none; }
+      .filters { justify-content: flex-start; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .dish-card { grid-template-columns: 104px 1fr; }
+      .signature { padding-right: 6vw; padding-left: 6vw; }
+      .signature-track { grid-auto-columns: minmax(250px, 75vw); }
+      .signature-card { height: 340px; }
+      .banquet { padding-top: 84px; padding-bottom: 84px; }
+      .event-grid { grid-template-columns: repeat(2,1fr); }
+      .event-card { min-height: 97px; }
+      .banquet-foot { align-items: flex-start; flex-direction: column; }
+      .private { grid-template-columns: 1fr; }
+      .private-visual { min-height: 360px; max-height: 470px; }
+      .private-copy { padding: 65px 7vw 76px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 170px 180px; }
+      .gallery-item:first-child { grid-row: span 1; }
+      .gallery-item:nth-child(4) { grid-column: auto; }
+      .gallery-item:nth-child(5) { display: none; }
+      .review-panel { grid-template-columns: 1fr; gap: 30px; }
+      .review-score { padding: 0 0 26px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+      .review-score strong { font-size: 70px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 35px; }
+      .map-frame { min-height: 320px; }
+      .booking { grid-template-columns: 1fr; }
+      .booking-copy { padding: 70px 7vw 35px; }
+      .booking-form-wrap { padding: 25px 7vw 70px; }
+      .offer-grid { grid-template-columns: 1fr 1fr; }
+      .offer-card { min-height: 169px; padding: 17px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 30px 22px; }
+      .footer-top > div:first-child { grid-column: 1/-1; }
+      .footer-bottom { flex-direction: column; }
+      .float-wa { right: 16px; bottom: 92px; width: 49px; height: 49px; }
+      .cart-pill { right: 14px; bottom: 151px; }
+      .float-wa { display: none; }
+      .mobile-actions { position: fixed; z-index: 28; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(5,1fr); padding: 7px 2px calc(7px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(255,255,255,.13); color: white; background: rgba(23,23,20,.97); backdrop-filter: blur(12px); }
+      .mobile-actions a { display: flex; flex-direction: column; align-items: center; gap: 4px; color: rgba(255,255,255,.82); font-size: 8px; letter-spacing: .04em; }
+      .mobile-actions a span:first-child { color: var(--gold-bright); font-size: 16px; }
+      .footer { padding-bottom: 100px; }
+      .lightbox { grid-template-columns: 36px 1fr 36px; padding: 4vh 2vw; }
+      .lightbox img { max-width: 88vw; }
+      .lightbox button { width: 32px; height: 36px; }
+    }
+    @media (max-width: 430px) {
+      .hero h1 { font-size: 53px; }
+      .hero-actions { gap: 8px; }
+      .hero-actions .btn { min-height: 47px; padding: 0 14px; font-size: 9px; }
+      .hero-meta span { font-size: 9px; }
+      .story-list { gap: 13px 7px; }
+      .story-list li { gap: 6px; font-size: 10px; }
+      .dish-card { grid-template-columns: 90px 1fr; }
+      .dish-title { font-size: 16px; }
+      .catalogue-cta { align-items: flex-start; flex-direction: column; }
+      .contact-info { gap: 19px 13px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full, .form-foot, .form-feedback { grid-column: auto; }
+      .form-foot { align-items: flex-start; flex-direction: column; }
+      .admin-form { grid-template-columns: 1fr; }
+      .admin-field.full { grid-column: auto; }
+      .admin-foot { align-items: flex-start; flex-direction: column; }
+    }
+    @media (pointer: fine) and (min-width: 1000px) { body, a, button { cursor: none; } .cursor-label { display: grid; } }
+    @media (pointer: coarse), (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .signature { height: auto !important; padding-top: 77px; padding-bottom: 77px; }
+      .signature-stage { position: relative; top: auto; height: auto; }
+      .signature-track { overflow-x: auto; scroll-snap-type: x mandatory; }
+    }
+  </style>
+  <script type="application/ld+json" id="restaurant-schema"></script>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Hazratgunj home">HAZRATGUNJ<small>RESTAURANT &amp; BANQUET HALL</small></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#menu">Menu</a><a href="#story">About</a><a href="#gallery">Gallery</a><a href="#banquets">Banquets</a><a href="#private">Private Dining</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold nav-reserve" href="#reserve">Reserve a Table <span class="arrow">↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#gallery">Gallery</a><a href="#banquets">Banquets</a><a href="#private">Private dining</a><a href="#reviews">Guest reviews</a><a href="#contact">Find us</a><a href="#reserve">Reserve a table ↗</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="home" aria-label="Welcome to Hazratgunj">
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=88" alt="An elegant dining table set for a special evening" fetchpriority="high">
+      <div class="hero-copy">
+        <p class="hero-kicker" id="heroLocation">HAZRATGUNJ <span>•</span> GORAKHPUR</p>
+        <h1 class="serif"><span>Where</span><span>Great</span><span>Food</span><span>Meets</span><span>Grand Occasions</span></h1>
+        <p>Experience North Indian and Chinese flavours, elegant dining and unforgettable celebrations in the heart of Gorakhpur.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#menu">View Menu <span class="arrow">↗</span></a>
+          <a class="btn btn-outline" href="#reserve">Reserve a Table</a>
+          <a class="btn btn-outline" href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to know more about reservations and the menu.">WhatsApp Us</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>4.5 ★</strong> &nbsp;Guest rating</span>
+          <span><strong>4,500+</strong> &nbsp;Reviews*</span>
+          <span><strong>₹600–₹1,800</strong> &nbsp;per person</span>
+        </div>
+      </div>
+      <div class="hero-vertical">NORTH INDIAN · CHINESE · CELEBRATIONS</div>
+      <a class="scroll-cue" href="#story"><i></i> Scroll to discover</a>
+    </section>
+
+    <nav class="quickbar" aria-label="Quick actions">
+      <a href="#" data-call><span class="quick-ico">⌕</span> Call</a>
+      <a href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to know more."><span class="quick-ico">◉</span> WhatsApp</a>
+      <a href="#contact"><span class="quick-ico">⌖</span> Directions</a>
+      <a href="#menu"><span class="quick-ico">✳</span> View Menu</a>
+      <a href="#reserve"><span class="quick-ico">▦</span> Reserve</a>
+    </nav>
+
+    <section class="section story" id="story">
+      <div class="story-visual reveal">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1300&q=85" alt="Warm contemporary restaurant dining room" loading="lazy">
+        <div class="story-stamp"><strong>Gather</strong><span>A place for togetherness</span></div>
+      </div>
+      <div class="story-copy reveal">
+        <span class="eyebrow">The Hazratgunj experience</span>
+        <h2>Good Food.<br>Great Company.<br>Grand Memories.</h2>
+        <p>Make room for the moments that bring everyone together. Hazratgunj Restaurant and Banquet Hall welcomes guests for everyday dining, family gatherings, private occasions and celebrations in Gorakhpur.</p>
+        <ul class="story-list">
+          <li>North Indian Cuisine</li><li>Chinese Cuisine</li><li>Private Dining</li><li>Banquet Events</li><li>Family Dining</li><li>Special Occasions</li>
+        </ul>
+        <a class="text-link" href="#contact">Explore our story <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Made for the table</span><h2 style="margin-top:17px">Explore the Menu</h2></div>
+        <p class="section-note">Find a new favourite, plan a family meal or browse at your own pace. Ask the team about current availability and ingredients.</p>
+      </div>
+      <p class="menu-disclaimer reveal">Illustrative catalogue for this website demo. Confirm actual dishes, descriptions, availability and prices with the restaurant; listed sample dishes are editable.</p>
+      <div class="menu-tools reveal">
+        <label class="search-wrap"><span class="sr-only"></span><input id="menuSearch" type="search" placeholder="Search dishes or categories…" aria-label="Search menu"></label>
+        <div class="filters" aria-label="Menu filters">
+          <button class="filter-btn active" data-filter="all">All dishes</button><button class="filter-btn" data-filter="veg">Vegetarian</button><button class="filter-btn" data-filter="nonveg">Non-vegetarian</button><button class="filter-btn" data-filter="popular">Popular</button>
+        </div>
+      </div>
+      <div class="category-row reveal" id="categoryTabs" role="tablist" aria-label="Menu categories"></div>
+      <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+      <div class="catalogue-cta reveal">
+        <p>Menu prices and ingredient details are available from the restaurant. Online orders are sent as a WhatsApp enquiry; order acceptance and payment are confirmed directly by the team.</p>
+        <button class="btn btn-gold" id="menuOrderBtn">Start an order <span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="section signature" id="favourites">
+      <div class="signature-stage">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">A table worth gathering around</span><h2 style="margin-top:17px">Signature Favourites</h2></div>
+        <p class="section-note">A first look at the kinds of dishes guests can explore. Current menu and pricing are confirmed by the restaurant.</p>
+      </div>
+      <div class="signature-track reveal" id="signatureTrack">
+        <article class="signature-card"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=850&q=83" alt="Illustrative Indian curry served for sharing" loading="lazy"><div><span>North Indian · Sample</span><h3>Chicken Curry</h3></div></article>
+        <article class="signature-card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=850&q=83" alt="Illustrative North Indian meal with curry and breads" loading="lazy"><div><span>North Indian · Sample</span><h3>Paneer Specialties</h3></div></article>
+        <article class="signature-card"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=850&q=83" alt="Illustrative biryani rice dish" loading="lazy"><div><span>Rice &amp; Biryani · Sample</span><h3>Biryani</h3></div></article>
+        <article class="signature-card"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=850&q=83" alt="Illustrative Chinese noodle dish" loading="lazy"><div><span>Chinese · Sample</span><h3>Chinese Favourites</h3></div></article>
+        <article class="signature-card"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=850&q=83" alt="Illustrative tandoori-style platter" loading="lazy"><div><span>Tandoor · Sample</span><h3>Tandoori Specialities</h3></div></article>
+      </div>
+      <p class="visual-caption">Illustrative food photography; replace with approved Hazratgunj photographs and confirm the current catalogue before launch.</p>
+      </div>
+    </section>
+
+    <section class="section banquet" id="banquets">
+      <div class="banquet-inner reveal">
+        <span class="eyebrow">Make it a moment</span>
+        <h2>Celebrate Something Special?</h2>
+        <p class="banquet-lead" id="banquetDescription">From intimate gatherings to grand celebrations, Hazratgunj offers an elegant setting for memorable occasions. Share your plans and the team can discuss current venue and dining options.</p>
+        <div class="event-grid">
+          <div class="event-card"><span>✧</span><strong>Weddings</strong></div><div class="event-card"><span>♡</span><strong>Engagements</strong></div><div class="event-card"><span>✦</span><strong>Birthdays</strong></div><div class="event-card"><span>⌂</span><strong>Corporate Events</strong></div><div class="event-card"><span>❋</span><strong>Family Functions</strong></div><div class="event-card"><span>◌</span><strong>Private Parties</strong></div>
+        </div>
+        <div class="banquet-foot">
+          <small>Event availability, packages, pricing and guest capacity are configurable and must be confirmed directly with the restaurant.</small>
+          <a class="btn btn-gold" href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to enquire about hosting an event at the banquet hall.">Enquire about banquet <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="private" id="private">
+      <div class="private-visual reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="Illustrative private restaurant dining space" loading="lazy"></div>
+      <div class="private-copy reveal">
+        <span class="eyebrow">A little more personal</span>
+        <h2>Your Table.<br>Your Celebration.</h2>
+        <p id="privateDescription">Bring your favourite people together in a more personal setting. Ask the Hazratgunj team about private dining for the occasion you have in mind.</p>
+        <div class="private-list"><span>Private celebrations</span><span>Family gatherings</span><span>Business dinners</span><span>Special occasions</span></div>
+        <a class="btn btn-gold" href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to enquire about private dining.">Book private dining <span class="arrow">↗</span></a>
+        <p class="visual-caption" style="color:rgba(255,255,255,.48)">Illustrative ambience photography; replace with approved restaurant imagery.</p>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">The setting &amp; the flavours</span><h2 style="margin-top:17px">A Taste of the Occasion</h2></div>
+        <p class="section-note">A visual preview for the demo. Replace these illustrative photographs with approved food, restaurant and event images.</p>
+      </div>
+      <div class="gallery-grid reveal" id="galleryGrid">
+        <button class="gallery-item" aria-label="View food photograph"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1050&q=85" alt="Illustrative shared dining platter" loading="lazy"><span>Food · Sample</span></button>
+        <button class="gallery-item" aria-label="View restaurant photograph"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=82" alt="Illustrative restaurant interior" loading="lazy"><span>Ambience · Sample</span></button>
+        <button class="gallery-item" aria-label="View dining photograph"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=82" alt="Illustrative restaurant table setting" loading="lazy"><span>Dining · Sample</span></button>
+        <button class="gallery-item" aria-label="View celebration photograph"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=82" alt="Illustrative banquet celebration setting" loading="lazy"><span>Celebrations · Sample</span></button>
+        <button class="gallery-item" aria-label="View Indian food photograph"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=82" alt="Illustrative Indian cuisine" loading="lazy"><span>North Indian · Sample</span></button>
+      </div>
+      <p class="visual-caption">Photography shown for visual direction, not as verified photographs of this restaurant.</p>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">A good meal stays with you</span><h2 style="margin-top:17px">What Our Guests Say</h2></div>
+        <p class="section-note">Rating information supplied for this website demo. No individual customer reviews have been provided or reproduced.</p>
+      </div>
+      <div class="review-panel reveal">
+        <div class="review-score"><strong>4.5 <span style="font:400 31px var(--sans)">★</span></strong><div class="review-stars">★★★★★</div><p>4,500+ reviews<br>Restaurant information supplied by the client; not a live Google feed.</p></div>
+        <div class="review-testimonials" id="reviewTestimonials"><p class="review-empty">Your guests’ words belong here. Approved testimonials can be added through the editable content studio once review text and attribution are supplied.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="offers">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Something for every gathering</span><h2 style="margin-top:17px">This Week at Hazratgunj</h2></div>
+        <p class="section-note">An editable space for restaurant-approved promotions, packages and seasonal updates.</p>
+      </div>
+      <div class="offer-grid reveal" id="offerGrid"></div>
+      <p class="offers-note">No discounts or limited-time offers are being advertised. Ask the restaurant about current options.</p>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Come join us</span><h2 style="margin-top:17px">Find Your Way to Us</h2></div>
+        <p class="section-note">For the latest hours, table availability and directions, please contact the restaurant directly.</p>
+      </div>
+      <div class="contact-layout reveal">
+        <div>
+          <div class="contact-info">
+            <div class="info-block"><strong>Location</strong><p id="addressDisplay"></p></div>
+            <div class="info-block"><strong>Phone</strong><p><a id="phoneDisplay"></a></p></div>
+            <div class="info-block"><strong>Price range</strong><p id="priceDisplay"></p><p class="subtle">Per person · supplied restaurant information</p></div>
+            <div class="info-block"><strong>Cuisine</strong><p id="cuisineDisplay"></p></div>
+            <div class="info-block"><strong>Dining</strong><p>Dine-in · Private dining · Banquet</p></div>
+            <div class="info-block"><strong>Hours</strong><p id="hoursDisplay"></p><p class="subtle">Hours can be confirmed by phone.</p></div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-dark" href="#" data-directions>Get directions <span class="arrow">↗</span></a>
+            <a class="btn btn-dark" href="#" data-call>Call now</a>
+            <a class="btn btn-gold" href="#" data-whatsapp="Hello Hazratgunj Restaurant, I have a question.">WhatsApp</a>
+          </div>
+        </div>
+        <div>
+          <iframe class="map-frame" id="mapFrame" title="Map search for Hazratgunj Restaurant and Banquet Hall" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="map-caption">Map search uses the configured address; verify the exact place pin before publishing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="reserve">
+      <div class="booking-copy">
+        <span class="eyebrow">Let us set a place for you</span>
+        <h2>Make a Reservation</h2>
+        <p>Share your preferred date and details. This form prepares a WhatsApp enquiry for the restaurant—your table is not booked until the team confirms.</p>
+        <a class="text-link" href="#" data-call style="color:white">Prefer to call? <span class="arrow">→</span></a>
+      </div>
+      <div class="booking-form-wrap">
+        <form id="reservationForm" class="form-grid">
+          <div class="field"><label for="guestName">Your name</label><input id="guestName" name="name" autocomplete="name" placeholder="Name" required maxlength="80"></div>
+          <div class="field"><label for="guestPhone">Phone number</label><input id="guestPhone" name="phone" type="tel" autocomplete="tel" placeholder="Your number" required pattern="[+0-9() -]{7,18}" maxlength="18"></div>
+          <div class="field"><label for="reserveDate">Preferred date</label><input id="reserveDate" name="date" type="date" required></div>
+          <div class="field"><label for="reserveTime">Preferred time</label><input id="reserveTime" name="time" type="time" required></div>
+          <div class="field"><label for="guestCount">Guests</label><select id="guestCount" name="guests" required><option value="">Select guests</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9+</option></select></div>
+          <div class="field"><label for="occasion">Occasion</label><select id="occasion" name="occasion"><option>Dining</option><option>Birthday</option><option>Family gathering</option><option>Business dinner</option><option>Other</option></select></div>
+          <div class="field full"><label for="request">Special request</label><textarea id="request" name="request" maxlength="500" placeholder="Anything you’d like us to know?"></textarea></div>
+          <div class="form-foot"><button class="btn btn-gold" type="submit">Request reservation <span class="arrow">↗</span></button><small>Enquiry only. Restaurant confirmation is required for a booking.</small></div>
+          <p class="form-feedback" id="reservationFeedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div><a class="brand" href="#home">HAZRATGUNJ<small>RESTAURANT &amp; BANQUET HALL</small></a><p>Great Food. Grand Occasions.<br>A destination for North Indian and Chinese dining, private dining and celebrations in Gorakhpur.</p></div>
+      <div><h4>Explore</h4><div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#story">About</a><a href="#gallery">Gallery</a><a href="#banquets">Banquets</a><a href="#private">Private Dining</a><a href="#reserve">Reservations</a><a href="#contact">Contact</a></div></div>
+      <div><h4>Get in touch</h4><div class="footer-contact"><span>Gorakhpur, Uttar Pradesh</span><a href="#" data-call id="footerPhone"></a><a href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to know more.">WhatsApp the team ↗</a><a href="#" data-directions>Get directions ↗</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yearNow"></span> Hazratgunj Restaurant &amp; Banquet Hall</span><span><a href="#" data-policy="Privacy policy">Privacy Policy</a><a href="#" data-policy="Terms">Terms</a><a href="#" data-policy="Refund / order policy">Refund / Order Policy</a><a href="#" id="openAdmin">Owner content studio</a></span></div>
+  </footer>
+
+  <a class="float-wa" href="#" aria-label="Message Hazratgunj on WhatsApp" data-whatsapp="Hello Hazratgunj Restaurant, I would like to know more about reservations and the menu.">◉</a>
+  <nav class="mobile-actions" aria-label="Quick contact actions">
+    <a href="#" data-call><span>⌕</span>Call</a><a href="#" data-whatsapp="Hello Hazratgunj Restaurant, I would like to know more."><span>◉</span>WhatsApp</a><a href="#menu"><span>✳</span>Menu</a><a href="#reserve"><span>▦</span>Reserve</a><a href="#" data-directions><span>⌖</span>Directions</a>
+  </nav>
+  <button class="cart-pill" id="cartPill" aria-label="Open order enquiry"><span class="cart-count" id="cartCount">0</span> Order enquiry <span>↗</span></button>
+  <div class="overlay" id="cartOverlay" aria-hidden="true">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer-head"><h3 id="cartTitle">Your order enquiry</h3><button class="icon-close" data-close-cart aria-label="Close cart">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary" id="cartSummary"></div>
+    </aside>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+    <button id="lightPrev" aria-label="Previous image">‹</button><img id="lightImage" alt=""><button id="lightNext" aria-label="Next image">›</button><button class="lightbox-close" id="lightClose" aria-label="Close image">×</button>
+  </div>
+  <div class="admin-modal" id="adminModal" aria-hidden="true">
+    <section class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <div class="admin-head"><div><span class="eyebrow">Content management</span><h2 id="adminTitle">Owner Content Studio</h2></div><button class="icon-close" id="adminClose" aria-label="Close studio">×</button></div>
+      <div class="admin-tabs" id="adminTabs">
+        <button class="admin-tab active" data-admin-tab="business">Business</button><button class="admin-tab" data-admin-tab="menu">Menu</button><button class="admin-tab" data-admin-tab="offers">Offers</button><button class="admin-tab" data-admin-tab="gallery">Gallery</button><button class="admin-tab" data-admin-tab="events">Events &amp; reviews</button><button class="admin-tab" data-admin-tab="analytics">Analytics</button>
+      </div>
+      <div class="admin-content" id="adminContent"></div>
+      <div class="admin-foot"><small>Demo content editor: changes stay in this open page until you download your settings JSON. Import that file when you return. No login, cloud database, order dashboard or reservation backend is connected.</small><button class="btn btn-dark" id="exportConfig">Download settings JSON</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cursor-label" id="cursorLabel" aria-hidden="true">EXPLORE</div>
+
+  <script>
+  (() => {
+    "use strict";
+    const initialConfig = {
+      restaurant: {
+        name: "Hazratgunj Restaurant and Banquet Hall",
+        shortName: "Hazratgunj",
+        phone: "090769 23125",
+        whatsapp: "919076923125",
+        address: "ARBIT-28, Park Rd, above KALYAN JEWELLERS, Bilandpur, Gorakhpur, Uttar Pradesh 273001",
+        cuisine: "Chinese · North Indian",
+        priceRange: "₹600–₹1,800",
+        hours: "Opens at 11:00 AM · Closing time to be confirmed",
+        tagline: "Great Food. Grand Occasions."
+      },
+      categories: ["All", "Vegetarian Starters", "Non-Vegetarian Starters", "Chinese Starters", "Paneer", "Chicken", "Mutton", "Dal", "Gravy", "Tandoor", "Noodles", "Fried Rice", "Manchurian", "Chinese Main Course", "Breads", "Rice & Biryani", "Beverages", "Desserts", "Special / Combo"],
+      dishes: [
+        {id:"sample-naan", name:"Butter Naan", category:"Breads", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-curry", name:"Chicken Curry", category:"Chicken", description:"Menu details to be confirmed by the restaurant.", price:null, type:"nonveg", popular:false, available:true, image:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-butter-chicken", name:"Butter Chicken", category:"Chicken", description:"Menu details to be confirmed by the restaurant.", price:null, type:"nonveg", popular:false, available:true, image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-paneer", name:"Paneer Specialties", category:"Paneer", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-biryani", name:"Biryani", category:"Rice & Biryani", description:"Menu details to be confirmed by the restaurant.", price:null, type:"nonveg", popular:false, available:true, image:"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-chinese-starters", name:"Chinese Starters", category:"Chinese Starters", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-chinese-main", name:"Chinese Main Course", category:"Chinese Main Course", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-tandoor", name:"Tandoori Specialities", category:"Tandoor", description:"Menu details to be confirmed by the restaurant.", price:null, type:"nonveg", popular:false, available:true, image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-vegetarian", name:"Vegetarian Specials", category:"Dal", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=78"},
+        {id:"sample-dessert", name:"Desserts", category:"Desserts", description:"Menu details to be confirmed by the restaurant.", price:null, type:"veg", popular:false, available:true, image:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=78"}
+      ],
+      offers: [
+        {title:"Family Dining", detail:"Ask the restaurant about current family dining options."},
+        {title:"Banquet Packages", detail:"Enquire directly for event details and available arrangements."},
+        {title:"Special Combos", detail:"Ask the team about current menu combinations."},
+        {title:"Seasonal Specials", detail:"Check with the restaurant for seasonal menu updates."}
+      ],
+      gallery: [
+        {image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1050&q=85", alt:"Illustrative shared dining platter", category:"Food"},
+        {image:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=82", alt:"Illustrative restaurant interior", category:"Ambience"},
+        {image:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=82", alt:"Illustrative restaurant table setting", category:"Restaurant"},
+        {image:"https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=82", alt:"Illustrative banquet celebration", category:"Banquet"}
+      ],
+      banquetText:"From intimate gatherings to grand celebrations, Hazratgunj offers an elegant setting for memorable occasions. Share your plans and the team can discuss current venue and dining options.",
+      privateText:"Bring your favourite people together in a more personal setting. Ask the Hazratgunj team about private dining for the occasion you have in mind.",
+      testimonials: [],
+      policies: {privacy:"", terms:"", refund:""}
+    };
+    let config = structuredClone(initialConfig);
+    let activeCategory = "All", activeFilter = "all", menuQuery = "", cart = {}, editingDishId = null, activeAdminTab = "business", galleryIndex = 0;
+    const $ = (s, root=document) => root.querySelector(s);
+    const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const safeImage = value => { try { const u = new URL(value); return ["https:","http:"].includes(u.protocol) ? u.href : ""; } catch { return ""; } };
+    const formatPrice = value => Number.isFinite(Number(value)) && value !== "" && value !== null ? `₹${Number(value).toLocaleString("en-IN")}` : "Price available in menu";
+    const restaurant = () => config.restaurant;
+    const toast = message => { const el=$("#toast"); el.textContent=message; el.classList.add("show"); clearTimeout(toast.timer); toast.timer=setTimeout(()=>el.classList.remove("show"),2800); };
+    const waUrl = message => `https://wa.me/${String(restaurant().whatsapp).replace(/\D/g,"")}?text=${encodeURIComponent(message)}`;
+    const openWhatsApp = message => window.open(waUrl(message), "_blank", "noopener,noreferrer");
+    const mapsQuery = () => encodeURIComponent(`${restaurant().name}, ${restaurant().address}`);
+    const directionUrl = () => `https://www.google.com/maps/search/?api=1&query=${mapsQuery()}`;
+    const callUrl = () => `tel:${String(restaurant().phone).replace(/[^\d+]/g,"")}`;
+    function updateBusiness() {
+      document.title = `${restaurant().name} | Gorakhpur`;
+      $("#heroLocation").innerHTML = `${esc(restaurant().shortName.toUpperCase())} <span>•</span> GORAKHPUR`;
+      $("#addressDisplay").textContent=restaurant().address;
+      $("#phoneDisplay").textContent=restaurant().phone; $("#phoneDisplay").href=callUrl();
+      $("#footerPhone").textContent=restaurant().phone; $("#footerPhone").href=callUrl();
+      $("#priceDisplay").textContent=restaurant().priceRange+" per person";
+      $("#cuisineDisplay").textContent=restaurant().cuisine;
+      $("#hoursDisplay").textContent=restaurant().hours;
+      $("#banquetDescription").textContent=config.banquetText;
+      $("#privateDescription").textContent=config.privateText;
+      $("#mapFrame").src=`https://maps.google.com/maps?q=${mapsQuery()}&output=embed`;
+      const schema={"@context":"https://schema.org","@type":"Restaurant","name":restaurant().name,"address":{"@type":"PostalAddress","streetAddress":restaurant().address,"addressLocality":"Gorakhpur","addressRegion":"Uttar Pradesh","postalCode":"273001","addressCountry":"IN"},"telephone":restaurant().phone,"servesCuisine":restaurant().cuisine.split(" · "),"priceRange":restaurant().priceRange,"acceptsReservations":true};
+      $("#restaurant-schema").textContent=JSON.stringify(schema);
+      $("#offerGrid").innerHTML=config.offers.map(o=>`<article class="offer-card"><span>Hazratgunj · ${esc(restaurant().shortName)}</span><div><h3>${esc(o.title)}</h3><p>${esc(o.detail)}</p></div></article>`).join("");
+      $("#yearNow").textContent=new Date().getFullYear();
+      const dateInput=$("#reserveDate"); dateInput.min=new Date().toISOString().slice(0,10);
+      renderTestimonials();
+    }
+    function renderCategories() {
+      const categories=["All",...new Set(config.categories.filter(c=>c!=="All"))];
+      $("#categoryTabs").innerHTML=categories.map(c=>`<button role="tab" aria-selected="${activeCategory===c}" class="category-btn ${activeCategory===c?"active":""}" data-category="${esc(c)}">${esc(c)}</button>`).join("");
+    }
+    function renderMenu() {
+      renderCategories();
+      const found=config.dishes.filter(d=>{
+        const search=menuQuery.toLowerCase();
+        const searchOk=!search||`${d.name} ${d.category} ${d.description}`.toLowerCase().includes(search);
+        const categoryOk=activeCategory==="All"||d.category===activeCategory;
+        const filterOk=activeFilter==="all"||activeFilter==="popular"&&d.popular||activeFilter==="veg"&&d.type==="veg"||activeFilter==="nonveg"&&d.type==="nonveg";
+        return d.available!==false&&searchOk&&categoryOk&&filterOk;
+      });
+      $("#menuGrid").innerHTML=found.length?found.map(d=>`<article class="dish-card">
+        <img src="${esc(safeImage(d.image)||"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=75")}" alt="${esc(d.name)} — illustrative menu photography" loading="lazy">
+        <div class="dish-body"><span class="dish-kind">${d.type==="veg"?"● Vegetarian":"● Non-vegetarian"} · ${esc(d.category)}</span><h3 class="dish-title">${esc(d.name)}</h3><p class="dish-desc">${esc(d.description||"Ask our team for menu details.")}</p><div class="dish-bottom"><span class="dish-price">${formatPrice(d.price)}</span><button class="add-btn" data-add="${esc(d.id)}" aria-label="Add ${esc(d.name)} to order enquiry">+ Add</button></div></div>
+      </article>`).join(""):`<div class="menu-empty">No dishes match this selection.<br>Choose another category or ask the restaurant for the latest menu.</div>`;
+    }
+    function renderCart() {
+      const entries=Object.entries(cart).filter(([,qty])=>qty>0);
+      const totalQty=entries.reduce((sum,[,qty])=>sum+qty,0);
+      $("#cartCount").textContent=totalQty; $("#cartPill").classList.toggle("visible",totalQty>0);
+      if(!entries.length) {
+        $("#cartItems").innerHTML='<div class="cart-empty">Your order enquiry is empty.<br>Add dishes from the menu to get started.</div>';
+        $("#cartSummary").innerHTML=""; return;
+      }
+      const products=entries.map(([id,qty])=>({dish:config.dishes.find(d=>d.id===id),qty})).filter(x=>x.dish);
+      $("#cartItems").innerHTML=products.map(({dish,qty})=>`<div class="cart-line"><div><strong>${esc(dish.name)}</strong><small>${formatPrice(dish.price)} · price confirmed by restaurant</small></div><div class="quantity"><button data-qty="${esc(dish.id)}" data-delta="-1" aria-label="Remove one ${esc(dish.name)}">−</button><span>${qty}</span><button data-qty="${esc(dish.id)}" data-delta="1" aria-label="Add one ${esc(dish.name)}">+</button></div></div>`).join("");
+      const allPriced=products.every(x=>Number.isFinite(Number(x.dish.price))&&x.dish.price!==null&&x.dish.price!=="");
+      const total=products.reduce((sum,x)=>sum+(Number(x.dish.price)||0)*x.qty,0);
+      $("#cartSummary").innerHTML=`<div class="field"><label for="orderType">Order type</label><select id="orderType"><option>Dine-in</option><option>Takeaway</option><option>Delivery enquiry</option></select></div><p>${allPriced?`Menu subtotal: <strong>${formatPrice(total)}</strong>`:"Prices are not set in this demo catalogue. The restaurant will confirm pricing and availability."}<br>No payment or order processing is connected.</p><button class="btn btn-gold" id="sendOrder">Continue on WhatsApp ↗</button><a class="btn btn-outline" href="${callUrl()}">Call restaurant</a>`;
+    }
+    function orderMessage() {
+      const products=Object.entries(cart).map(([id,qty])=>({dish:config.dishes.find(d=>d.id===id),qty})).filter(x=>x.dish&&x.qty>0);
+      const allPriced=products.every(x=>Number.isFinite(Number(x.dish.price))&&x.dish.price!==null&&x.dish.price!=="");
+      const total=products.reduce((sum,x)=>sum+(Number(x.dish.price)||0)*x.qty,0);
+      const type=$("#orderType")?.value||"Dine-in";
+      return `Hello ${restaurant().name}, I would like to place an order enquiry.\n\nItems:\n${products.map(x=>`• ${x.dish.name} × ${x.qty}`).join("\n")}\n\nEstimated total: ${allPriced?formatPrice(total):"To be confirmed by restaurant"}\nOrder type: ${type}\n\nPlease confirm availability, final pricing and next steps.`;
+    }
+    function renderGallery() {
+      const defaults=config.gallery;
+      $("#galleryGrid").innerHTML=defaults.map((g,i)=>`<button class="gallery-item" data-gallery="${i}" aria-label="View ${esc(g.category)} photograph"><img src="${esc(safeImage(g.image))}" alt="${esc(g.alt)}" loading="lazy"><span>${esc(g.category)} · Sample</span></button>`).join("");
+    }
+    function renderTestimonials() {
+      const root=$("#reviewTestimonials");
+      if(!root)return;
+      root.innerHTML=config.testimonials.length?config.testimonials.map(t=>`<figure class="review-quote"><div class="review-stars">★★★★★</div><blockquote>“${esc(t.text)}”</blockquote><figcaption>${esc(t.name||"Guest")}</figcaption></figure>`).join(""):'<p class="review-empty">Your guests’ words belong here. Approved testimonials can be added through the editable content studio once review text and attribution are supplied.</p>';
+    }
+    function openModal(el) { el.classList.add("open"); el.setAttribute("aria-hidden","false"); document.body.classList.add("locked"); }
+    function closeModal(el) { el.classList.remove("open"); el.setAttribute("aria-hidden","true"); if(!$(".admin-modal.open")&&!$(".overlay.open")&&!$(".lightbox.open"))document.body.classList.remove("locked"); }
+    function adminField(label,key,value,type="text",full=false) { return `<div class="admin-field ${full?"full":""}"><label for="adm-${key}">${esc(label)}</label><input id="adm-${key}" name="${esc(key)}" type="${type}" value="${esc(value)}"></div>`; }
+    function showAdminStatus(message) { const el=$("#adminStatus"); if(el)el.textContent=message; }
+    function renderAdmin() {
+      $$(".admin-tab").forEach(b=>b.classList.toggle("active",b.dataset.adminTab===activeAdminTab));
+      const r=restaurant(); let content="";
+      if(activeAdminTab==="business") {
+        content=`<p class="admin-warning">Restaurant details currently use the supplied brief. Verify contact information, exact Google Maps pin, opening hours and rating details with the owner before the public launch.</p><form id="businessForm" class="admin-form">
+          ${adminField("Restaurant name","name",r.name)}${adminField("Short brand name","shortName",r.shortName)}${adminField("Phone","phone",r.phone,"tel")}${adminField("WhatsApp number · country code","whatsapp",r.whatsapp,"tel")}
+          <div class="admin-field full"><label for="adm-address">Full address</label><textarea id="adm-address" name="address">${esc(r.address)}</textarea></div>
+          ${adminField("Cuisine","cuisine",r.cuisine)}${adminField("Price range per person","priceRange",r.priceRange)}${adminField("Opening hours","hours",r.hours)}${adminField("Tagline","tagline",r.tagline)}
+          <div class="admin-actions admin-field full"><button class="btn btn-dark" type="submit">Apply business details</button><label class="btn btn-outline" style="color:var(--ink);border-color:var(--line);cursor:pointer">Import settings JSON<input id="importConfig" type="file" accept=".json,application/json" hidden></label></div></form>`;
+      } else if(activeAdminTab==="menu") {
+        content=`<p class="admin-warning">Use the form to add or update dishes. Prices are optional; leave blank until confirmed. Images must be public HTTPS URLs. Removing a dish updates this page only until you export your settings.</p>
+          <form id="dishForm" class="admin-form">${adminField("Dish name","dishName","")}${adminField("Category","dishCategory",config.categories[1]||"")}
+          <div class="admin-field"><label for="adm-dishPrice">Price (INR)</label><input id="adm-dishPrice" name="dishPrice" type="number" min="0" step="1" placeholder="Leave blank until confirmed"></div>
+          <div class="admin-field"><label for="adm-dishType">Food type</label><select id="adm-dishType" name="dishType"><option value="veg">Vegetarian</option><option value="nonveg">Non-vegetarian</option></select></div>
+          <div class="admin-field full"><label for="adm-dishDesc">Description</label><textarea id="adm-dishDesc" name="dishDesc" placeholder="Use restaurant-approved description"></textarea></div>
+          <div class="admin-field full"><label for="adm-dishImage">Photo URL</label><input id="adm-dishImage" name="dishImage" type="url" placeholder="https://…"></div>
+          <div class="admin-field"><label><input id="adm-popular" type="checkbox"> Mark as popular</label></div><div class="admin-field"><label><input id="adm-available" type="checkbox" checked> Available on menu</label></div>
+          <div class="admin-actions admin-field full"><button class="btn btn-dark" id="saveDish" type="submit">${editingDishId?"Update dish":"Add dish"}</button><button class="btn btn-outline" style="color:var(--ink);border-color:var(--line)" id="cancelDish" type="button">Clear</button></div></form>
+          <div class="admin-list">${config.dishes.map(d=>`<div class="admin-row"><div><strong>${esc(d.name)}</strong><small>${esc(d.category)} · ${d.price?formatPrice(d.price):"Price not set"} · ${d.available===false?"Unavailable":"Available"}</small></div><div><button data-edit-dish="${esc(d.id)}">Edit</button> &nbsp;<button data-delete-dish="${esc(d.id)}">Remove</button></div></div>`).join("")}</div>`;
+      } else if(activeAdminTab==="offers") {
+        content=`<p class="admin-warning">Only add restaurant-approved, current promotional details. This demo does not schedule, validate or publish offers to a database.</p>
+          <form id="offerForm" class="admin-form">${adminField("Offer / feature title","offerTitle","")}<div class="admin-field full"><label for="adm-offerDetail">Details</label><textarea id="adm-offerDetail" name="offerDetail" placeholder="No unconfirmed discount claims"></textarea></div><div class="admin-actions admin-field full"><button class="btn btn-dark">Add feature</button></div></form>
+          <div class="admin-list">${config.offers.map((o,i)=>`<div class="admin-row"><div><strong>${esc(o.title)}</strong><small>${esc(o.detail)}</small></div><button data-delete-offer="${i}">Remove</button></div>`).join("")}</div>`;
+      } else if(activeAdminTab==="gallery") {
+        content=`<p class="admin-warning">The launch demo uses illustrative stock photography, not verified images of Hazratgunj. Add restaurant-approved public image URLs and captions. Images are not uploaded or stored by this page.</p>
+          <form id="galleryForm" class="admin-form">${adminField("Photo URL (HTTPS)","galleryUrl","","url",true)}${adminField("Alt text / caption","galleryAlt","")}${adminField("Category","galleryCategory","Food")}<div class="admin-actions admin-field full"><button class="btn btn-dark">Add gallery image</button></div></form>
+          <div class="admin-list">${config.gallery.map((g,i)=>`<div class="admin-row"><div><strong>${esc(g.category)}</strong><small>${esc(g.alt)}</small></div><button data-delete-gallery="${i}">Remove</button></div>`).join("")}</div>`;
+      } else if(activeAdminTab==="events") {
+        content=`<p class="admin-warning">No guest reviews, banquet capacities or package details were supplied. Only add confirmed event information and customer-approved testimonials.</p>
+          <form id="eventForm" class="admin-form"><div class="admin-field full"><label for="adm-banquetText">Banquet description</label><textarea id="adm-banquetText">${esc(config.banquetText)}</textarea></div><div class="admin-field full"><label for="adm-privateText">Private dining description</label><textarea id="adm-privateText">${esc(config.privateText)}</textarea></div>${adminField("Guest name (approved attribution)","reviewName","")}<div class="admin-field full"><label for="adm-reviewText">Approved testimonial</label><textarea id="adm-reviewText" placeholder="Add only a supplied, approved review"></textarea></div><div class="admin-actions admin-field full"><button class="btn btn-dark">Save event copy / testimonial</button></div></form>
+          <div class="admin-list">${config.testimonials.length?config.testimonials.map((t,i)=>`<div class="admin-row"><div><strong>${esc(t.name||"Guest")}</strong><small>${esc(t.text)}</small></div><button data-delete-review="${i}">Remove</button></div>`).join(""):"<p class='muted'>No testimonials have been added.</p>"}</div>`;
+      } else {
+        content=`<p class="admin-warning">No analytics provider is connected. This page does not display estimated or fabricated visitor, order, call, menu-view or conversion figures.</p><div class="info-block"><strong>Integration-ready events</strong><p>Menu opens · WhatsApp clicks · Calls · Directions · Reservation enquiries · Order enquiries · Banquet enquiries</p></div><div class="info-block" style="margin-top:18px"><strong>Owner access &amp; handover</strong><p>This is a front-end content demo, not a secure owner account. For production use, connect an authenticated CMS/database, owner roles, image uploads, order/reservation workflow and analytics provider. Exported settings can transfer editable content; no developer-only account is built into this page.</p></div>`;
+      }
+      $("#adminContent").innerHTML=content+`<p class="admin-status" id="adminStatus" aria-live="polite"></p>`;
+      bindAdminForm();
+    }
+    function resetDishForm() { editingDishId=null; renderAdmin(); }
+    function bindAdminForm() {
+      $("#businessForm")?.addEventListener("submit",e=>{e.preventDefault();const fd=new FormData(e.currentTarget);for(const key of ["name","shortName","phone","whatsapp","address","cuisine","priceRange","hours","tagline"])config.restaurant[key]=String(fd.get(key)||"").trim();config.restaurant.whatsapp=config.restaurant.whatsapp.replace(/\D/g,""); updateBusiness();renderAdmin();toast("Business details applied to this page.");});
+      $("#importConfig")?.addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;try{const imported=JSON.parse(await file.text());if(!imported||typeof imported!=="object"||!imported.restaurant||!Array.isArray(imported.dishes))throw new Error("Settings file is missing restaurant or menu data.");config={...structuredClone(initialConfig),...imported,restaurant:{...initialConfig.restaurant,...imported.restaurant}};config.dishes=config.dishes.map((d,i)=>({...d,id:String(d.id||`dish-${Date.now()}-${i}`),image:safeImage(d.image)}));updateBusiness();renderMenu();renderGallery();renderAdmin();toast("Settings imported for this page.");}catch(error){showAdminStatus(error.message||"Could not read this settings file.");}});
+      $("#dishForm")?.addEventListener("submit",e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const name=String(fd.get("dishName")||"").trim();if(!name)return;const price=String(fd.get("dishPrice")||"").trim();const id=editingDishId||`dish-${Date.now()}`;const item={id,name,category:String(fd.get("dishCategory")||"Other").trim(),description:String(fd.get("dishDesc")||"").trim(),price:price?Number(price):null,type:$("#adm-dishType").value,popular:$("#adm-popular").checked,available:$("#adm-available").checked,image:safeImage($("#adm-dishImage").value)};const pos=config.dishes.findIndex(d=>d.id===id);if(pos>=0)config.dishes[pos]=item;else config.dishes.push(item);if(!config.categories.includes(item.category))config.categories.push(item.category);editingDishId=null;renderMenu();renderAdmin();toast("Menu item applied to this page.");});
+      $("#cancelDish")?.addEventListener("click",()=>{editingDishId=null;renderAdmin();});
+      $$("[data-edit-dish]").forEach(b=>b.addEventListener("click",()=>{editingDishId=b.dataset.editDish;const d=config.dishes.find(x=>x.id===editingDishId);renderAdmin();$("#adm-dishName").value=d.name;$("#adm-dishCategory").value=d.category;$("#adm-dishPrice").value=d.price??"";$("#adm-dishType").value=d.type;$("#adm-dishDesc").value=d.description||"";$("#adm-dishImage").value=d.image||"";$("#adm-popular").checked=!!d.popular;$("#adm-available").checked=d.available!==false;$("#saveDish").textContent="Update dish";}));
+      $$("[data-delete-dish]").forEach(b=>b.addEventListener("click",()=>{config.dishes=config.dishes.filter(d=>d.id!==b.dataset.deleteDish);delete cart[b.dataset.deleteDish];renderMenu();renderCart();renderAdmin();}));
+      $("#offerForm")?.addEventListener("submit",e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const title=String(fd.get("offerTitle")||"").trim();if(!title)return;config.offers.push({title,detail:String(fd.get("offerDetail")||"").trim()});updateBusiness();renderAdmin();});
+      $$("[data-delete-offer]").forEach(b=>b.addEventListener("click",()=>{config.offers.splice(Number(b.dataset.deleteOffer),1);updateBusiness();renderAdmin();}));
+      $("#galleryForm")?.addEventListener("submit",e=>{e.preventDefault();const url=safeImage($("#adm-galleryUrl").value);const alt=$("#adm-galleryAlt").value.trim();if(!url||!alt){showAdminStatus("Add a valid image URL and alt text.");return;}config.gallery.push({image:url,alt,category:$("#adm-galleryCategory").value.trim()||"Food"});renderGallery();renderAdmin();});
+      $$("[data-delete-gallery]").forEach(b=>b.addEventListener("click",()=>{config.gallery.splice(Number(b.dataset.deleteGallery),1);renderGallery();renderAdmin();}));
+      $("#eventForm")?.addEventListener("submit",e=>{e.preventDefault();config.banquetText=$("#adm-banquetText").value.trim();config.privateText=$("#adm-privateText").value.trim();const name=$("#adm-reviewName").value.trim(),text=$("#adm-reviewText").value.trim();if(name&&text)config.testimonials.push({name,text});updateBusiness();renderAdmin();toast("Event copy and any approved testimonial applied to this page.");});
+      $$("[data-delete-review]").forEach(b=>b.addEventListener("click",()=>{config.testimonials.splice(Number(b.dataset.deleteReview),1);renderTestimonials();renderAdmin();}));
+    }
+    function downloadConfig() {
+      const blob=new Blob([JSON.stringify(config,null,2)],{type:"application/json"});
+      const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="hazratgunj-site-settings.json";document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);toast("Settings JSON downloaded.");
+    }
+
+    $("#menuSearch").addEventListener("input",e=>{menuQuery=e.target.value;renderMenu();});
+    $("#categoryTabs").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;activeCategory=b.dataset.category;renderMenu();});
+    $$(".filter-btn").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;$$(".filter-btn").forEach(x=>x.classList.toggle("active",x===b));renderMenu();}));
+    $("#menuGrid").addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;cart[b.dataset.add]=(cart[b.dataset.add]||0)+1;renderCart();toast("Added to your order enquiry.");});
+    $("#cartPill").addEventListener("click",()=>openModal($("#cartOverlay")));
+    $("#cartOverlay").addEventListener("click",e=>{if(e.target===$("#cartOverlay")||e.target.closest("[data-close-cart]"))closeModal($("#cartOverlay"));});
+    $("#cartItems").addEventListener("click",e=>{const b=e.target.closest("[data-qty]");if(!b)return;const id=b.dataset.qty;cart[id]=Math.max(0,(cart[id]||0)+Number(b.dataset.delta));if(!cart[id])delete cart[id];renderCart();});
+    $("#cartSummary").addEventListener("click",e=>{if(e.target.id==="sendOrder")openWhatsApp(orderMessage());});
+    $("#menuOrderBtn").addEventListener("click",()=>{if(!Object.values(cart).some(n=>n>0)){document.querySelector("#menuSearch").focus();toast("Add one or more menu items to start an enquiry.");}else openModal($("#cartOverlay"));});
+    $("#reservationForm").addEventListener("submit",e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const fd=new FormData(e.currentTarget);const text=`Hello ${restaurant().name}, I would like to request a table.\n\nName: ${fd.get("name")}\nPhone: ${fd.get("phone")}\nPreferred date: ${fd.get("date")}\nPreferred time: ${fd.get("time")}\nGuests: ${fd.get("guests")}\nOccasion: ${fd.get("occasion")}\nSpecial request: ${fd.get("request")||"None"}\n\nPlease confirm availability. I understand this is an enquiry, not a confirmed booking.`;$("#reservationFeedback").textContent="Your WhatsApp reservation enquiry is ready. The restaurant must confirm the booking.";openWhatsApp(text);});
+    document.body.addEventListener("click",e=>{const call=e.target.closest("[data-call]");if(call){e.preventDefault();window.location.href=callUrl();return;}const wa=e.target.closest("[data-whatsapp]");if(wa){e.preventDefault();openWhatsApp(wa.dataset.whatsapp);return;}const dir=e.target.closest("[data-directions]");if(dir){e.preventDefault();window.open(directionUrl(),"_blank","noopener,noreferrer");return;}const policy=e.target.closest("[data-policy]");if(policy){e.preventDefault();const key=policy.dataset.policy;toast(`${key}: restaurant-approved policy text must be added before launch.`);}});
+    $("#menuToggle").addEventListener("click",()=>{const open=$("#mobileNav").classList.toggle("open");$("#menuToggle").setAttribute("aria-expanded",String(open));document.body.classList.toggle("locked",open);});
+    $$("#mobileNav a").forEach(a=>a.addEventListener("click",()=>{$("#mobileNav").classList.remove("open");$("#menuToggle").setAttribute("aria-expanded","false");document.body.classList.remove("locked");}));
+    window.addEventListener("scroll",()=>$("#siteHeader").classList.toggle("scrolled",window.scrollY>25),{passive:true});
+    $("#galleryGrid").addEventListener("click",e=>{const b=e.target.closest("[data-gallery]");if(!b)return;galleryIndex=Number(b.dataset.gallery);showGallery();openModal($("#lightbox"));});
+    function showGallery(){const entry=config.gallery[galleryIndex];if(!entry)return;$("#lightImage").src=safeImage(entry.image);$("#lightImage").alt=entry.alt;}
+    $("#lightClose").addEventListener("click",()=>closeModal($("#lightbox")));
+    $("#lightPrev").addEventListener("click",()=>{galleryIndex=(galleryIndex-1+config.gallery.length)%config.gallery.length;showGallery();});
+    $("#lightNext").addEventListener("click",()=>{galleryIndex=(galleryIndex+1)%config.gallery.length;showGallery();});
+    $("#lightbox").addEventListener("click",e=>{if(e.target===$("#lightbox"))closeModal($("#lightbox"));});
+    let touchX=0;$("#lightbox").addEventListener("touchstart",e=>touchX=e.changedTouches[0].screenX,{passive:true});$("#lightbox").addEventListener("touchend",e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>55){galleryIndex=(galleryIndex+(dx<0?1:-1)+config.gallery.length)%config.gallery.length;showGallery();}},{passive:true});
+    $("#openAdmin").addEventListener("click",e=>{e.preventDefault();renderAdmin();openModal($("#adminModal"));});
+    $("#adminClose").addEventListener("click",()=>closeModal($("#adminModal")));
+    $("#adminModal").addEventListener("click",e=>{if(e.target===$("#adminModal"))closeModal($("#adminModal"));});
+    $("#adminTabs").addEventListener("click",e=>{const b=e.target.closest("[data-admin-tab]");if(!b)return;activeAdminTab=b.dataset.adminTab;editingDishId=null;renderAdmin();});
+    $("#exportConfig").addEventListener("click",downloadConfig);
+    document.addEventListener("keydown",e=>{if(e.key==="Escape"){["#cartOverlay","#adminModal","#lightbox"].forEach(s=>{const el=$(s);if(el.classList.contains("open"))closeModal(el);});if($("#mobileNav").classList.contains("open")){$("#mobileNav").classList.remove("open");document.body.classList.remove("locked");}}if(e.key==="ArrowRight"&&$("#lightbox").classList.contains("open"))$("#lightNext").click();if(e.key==="ArrowLeft"&&$("#lightbox").classList.contains("open"))$("#lightPrev").click();});
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("in-view");observer.unobserve(entry.target);}}),{threshold:.12});
+    $$(".reveal").forEach(el=>observer.observe(el));
+    const signatureSection=$("#favourites"), signatureRail=$("#signatureTrack");
+    function sizeSignatureRail(){
+      if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      signatureRail.style.transform="translate3d(0,0,0)";
+      const travel=Math.max(0,signatureRail.scrollWidth-signatureRail.clientWidth);
+      signatureSection.dataset.travel=String(travel);
+      signatureSection.style.height=`${window.innerHeight+travel}px`;
+      moveSignatureRail();
+    }
+    function moveSignatureRail(){
+      if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      const travel=Number(signatureSection.dataset.travel||0), range=signatureSection.offsetHeight-window.innerHeight;
+      const progress=range>0?Math.max(0,Math.min(1,(window.scrollY-signatureSection.offsetTop)/range)):0;
+      signatureRail.style.transform=`translate3d(${-travel*progress}px,0,0)`;
+    }
+    sizeSignatureRail();
+    window.addEventListener("resize",sizeSignatureRail,{passive:true});
+    window.addEventListener("scroll",moveSignatureRail,{passive:true});
+    const cursor=$("#cursorLabel");if(matchMedia("(pointer:fine) and (min-width:1000px)").matches){window.addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px";},{passive:true});document.body.addEventListener("mouseover",e=>{const target=e.target.closest(".gallery-item,.signature-card,.dish-card,a,button");if(target){cursor.textContent=target.matches(".gallery-item,.signature-card")?"VIEW":target.closest("#menu")?"ADD":"EXPLORE";cursor.classList.add("show");}else cursor.classList.remove("show");});}
+    updateBusiness();renderMenu();renderGallery();renderCart();
+  })();
+  </script>
+</body>
+</html>
